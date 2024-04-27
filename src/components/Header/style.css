@@ -1,0 +1,17 @@
+.header{
+    height: 2vh;
+    color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.link{
+    color: blue;
+    text-decoration: none;
+}
