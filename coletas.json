@@ -1,0 +1,28 @@
+{
+    "coletas":[
+        {
+            "localColeta": "Lagoa do Peri",
+            "descricao": "Entrada do Parque Municipal",
+            "usuario": "Fulano Cicrano",
+            "localizacao": "Praia da Armação",
+            "coordenadas": ["",""], 
+            "tiposResiduos": "Vidro"
+        },
+        {
+            "localColeta": "Terminal desativado Capoeiras",
+            "descricao": "Funcionamento entre 8:00 e 18:00",
+            "usuario": "Vitor Picolotto",
+            "localizacao": "Capoeiras",
+            "coordenadas": ["", ""],
+            "tiposResiduos": ["Eletrônicos", "Baterias", "Plástico", "Entulho", "Metal", "Vidro"]
+        },
+        {
+            "localColeta": "COMCAP Morro das Pedras",
+            "descricao": "Local de coleta próprio da COMCAP",
+            "usuario": "Renato Giordani",
+            "localizacao": "Morro das Pedras",
+            "coordenadas": ["", ""],
+            "tiposResiduos": ["Eletrônicos", "Baterias", "Plástico", "Entulho", "Metal", "Vidro"]
+        }
+    ]
+}

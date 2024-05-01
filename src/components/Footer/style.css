@@ -1,0 +1,20 @@
+.rodape{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape-lista{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2em;
+
+}
+
+.rodape-link{
+    text-decoration: none;
+    margin-right: 10px;
+}
