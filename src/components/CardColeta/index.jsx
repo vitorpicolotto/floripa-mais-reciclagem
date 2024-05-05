@@ -12,14 +12,13 @@ function CardColeta({dadosColeta}){
 
                 <div className='card-localizacao'>
                     <h4>Localização: {dadosColeta.localizacao}</h4>
-                    <p>Coordenadas: Latitude - {dadosColeta.coordenadas[0]}S, Longitude - {dadosColeta.coordenadas[1]}W</p>
+                    <p>Coordenadas: Latitude - {dadosColeta.coordenadas[0]} S, Longitude - {dadosColeta.coordenadas[1]} W</p>
                 </div>
 
                 <div className='card-residuos'>
                     <h4>Tipos de resíduos:</h4>
-                    <ul>
-                        <li>{dadosColeta.tiposResiduos}</li>
-                    </ul>
+                    <p>{dadosColeta.tiposResiduos}</p>
+                    
                 </div>
 
             </div>
@@ -33,8 +32,8 @@ CardColeta.propTypes = {
         descricao: PropTypes.string.isRequired,
         usuario: PropTypes.string.isRequired,
         localizacao: PropTypes.string.isRequired,
-        coordenadas:  PropTypes.shape({"latitude":PropTypes.number, "longitude":PropTypes.number}).isRequired,
-        tiposResiduos:  PropTypes.string.isRequired
+        coordenadas:  PropTypes.shape({"latitude":PropTypes.number,"longitude":PropTypes.number}).isRequired,
+        tiposResiduos:  PropTypes.arrayOf(PropTypes.string).isRequired
     })
 }
 
