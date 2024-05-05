@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import PaginaInicial from "../pages/PaginaInicial"; //TALVEZ PRECISE COLOCAR /index.jsx - ficar atento!
+import PaginaInicial from "../pages/PaginaInicial";
 import PaginaLogin from "../pages/PaginaLogin";
 import PaginaCadastroUsuario from "../pages/PaginaCadastroUsuario";
 import PaginaCadastroColeta from "../pages/PaginaCadastroColeta";

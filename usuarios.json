@@ -3,7 +3,7 @@
         {
             "nome": "Julia Isabelly Dias",
             "idade": 42,
-            "cpf": "76661931906",
+            "cpf": 76661931906,
             "data_nasc": "20/04/1982",
             "sexo": "Feminino",
             "email": "julia.isabelly.dias@inglesasset.com.br",
@@ -18,7 +18,7 @@
         {
             "nome": "Sueli Benedita Mariah Jesus",
             "idade": 65,
-            "cpf": "37176515956",
+            "cpf": 37176515956,
             "data_nasc": "01/05/1959",
             "sexo": "Feminino",
             "email": "suelibeneditajesus@dosnu.com.br",
@@ -33,7 +33,7 @@
         {
             "nome": "Enrico Joaquim das Neves",
             "idade": 45,
-            "cpf": "55351353997",
+            "cpf": 55351353997,
             "data_nasc": "27/02/1979",
             "sexo": "Masculino",
             "signo": "Peixes",
@@ -49,7 +49,7 @@
         {
             "nome": "Luna Raimunda Silveira",
             "idade": 56,
-            "cpf": "10938255967",
+            "cpf": 10938255967,
             "data_nasc": "17/02/1968",
             "sexo": "Feminino",
             "email": "luna_silveira@unitower.com.br",
@@ -64,7 +64,7 @@
         {
             "nome": "Alice Vera Duarte",
             "idade": 37,
-            "cpf": "91028134916",
+            "cpf": 91028134916,
             "data_nasc": "01/05/1987",
             "sexo": "Feminino",
             "email": "alice-duarte97@estagiarios.com",
