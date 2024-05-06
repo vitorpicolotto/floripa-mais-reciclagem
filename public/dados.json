@@ -1,0 +1,139 @@
+{
+  "coletas": [
+    {
+      "id": "1",
+      "localColeta": "Lagoa do Peri",
+      "descricao": "Entrada do Parque Municipal",
+      "usuario": "Alef Manga",
+      "localizacao": "Praia da Armação",
+      "coordenadas": [
+        27.734,
+        48.5262
+      ],
+      "tiposResiduos": "Vidro"
+    },
+    {
+      "id": "2",
+      "localColeta": "Terminal desativado Capoeiras",
+      "descricao": "Funcionamento entre 8:00 e 18:00",
+      "usuario": "Vitor Picolotto",
+      "localizacao": "Capoeiras",
+      "coordenadas": [
+        27.5967,
+        48.6031
+      ],
+      "tiposResiduos": "Todos"
+    },
+    {
+      "id": "3",
+      "localColeta": "COMCAP Morro das Pedras",
+      "descricao": "Local de coleta próprio da COMCAP",
+      "usuario": "Renato Giordani",
+      "localizacao": "Morro das Pedras",
+      "coordenadas": [
+        27.7056,
+        48.5051
+      ],
+      "tiposResiduos": "Todos"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Julia Isabelly Dias",
+      "idade": 42,
+      "cpf": 76661931906,
+      "data_nasc": "20/04/1982",
+      "sexo": "Feminino",
+      "email": "julia.isabelly.dias@inglesasset.com.br",
+      "senha": "8sgnIj22PK",
+      "cep": "88064062",
+      "endereco": "Rua São Francisco de Sales",
+      "numero": 972,
+      "bairro": "Ribeirão da Ilha",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "2",
+      "nome": "Sueli Benedita Mariah Jesus",
+      "idade": 65,
+      "cpf": 37176515956,
+      "data_nasc": "01/05/1959",
+      "sexo": "Feminino",
+      "email": "suelibeneditajesus@dosnu.com.br",
+      "senha": "aku4ZAunkh",
+      "cep": "88058840",
+      "endereco": "Rua das Ilhas",
+      "numero": 448,
+      "bairro": "Ingleses do Rio Vermelho",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "3",
+      "nome": "Enrico Joaquim das Neves",
+      "idade": 45,
+      "cpf": 55351353997,
+      "data_nasc": "27/02/1979",
+      "sexo": "Masculino",
+      "signo": "Peixes",
+      "email": "enrico_joaquim_dasneves@michaelpage.com.br",
+      "senha": "YccWOhHwR3",
+      "cep": "88034050",
+      "endereco": "Rua Professor Ayrton Roberto de Oliveira",
+      "numero": 398,
+      "bairro": "Itacorubi",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "4",
+      "nome": "Luna Raimunda Silveira",
+      "idade": 56,
+      "cpf": 10938255967,
+      "data_nasc": "17/02/1968",
+      "sexo": "Feminino",
+      "email": "luna_silveira@unitower.com.br",
+      "senha": "DLh0EYhZqT",
+      "cep": "88015480",
+      "endereco": "Rua Maestro Tullo Cavallazzi",
+      "numero": 901,
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "5",
+      "nome": "Alice Vera Duarte",
+      "idade": 37,
+      "cpf": 91028134916,
+      "data_nasc": "01/05/1987",
+      "sexo": "Feminino",
+      "email": "alice-duarte97@estagiarios.com",
+      "senha": "0q1h0pthuk",
+      "cep": "88090068",
+      "endereco": "Rua Nova Esperança",
+      "numero": 688,
+      "bairro": "Monte Cristo",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "f5e7",
+      "nome": "Camila Passos",
+      "idade": "20",
+      "cpf": "09345678900",
+      "data_nasc": "2004-03-07",
+      "sexo": "Feminino",
+      "email": "caca@gmail.com",
+      "senha": "caca123",
+      "cep": "88085155",
+      "endereco": "Campolino Alves",
+      "numero": "1199",
+      "bairro": "Abraão",
+      "cidade": "Floripa",
+      "estado": "SC"
+    }
+  ]
+}

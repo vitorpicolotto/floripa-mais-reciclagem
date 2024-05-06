@@ -1,20 +1,23 @@
 import { useForm } from "react-hook-form";
 import { PageTitle, FormComponent, InputWrapper } from "./styles.js";
+import React, {useContext} from "react";
+import { ColetasContext } from "../../context/ColetasContext.jsx";
 
 
 
 function PaginaCadastroColeta(){
     const {register, handleSubmit, formState:{errors}} = useForm();
+    const {cadastrarColeta} = useContext(ColetasContext)
     
-    function sendForm(formValue){
-        console.log(formValue)
+    const onSubmit= (data)=> {
+        cadastrarColeta(data)
     }
 
     return(
         <div className="container">
             <PageTitle>Cadastrar novo local de coleta</PageTitle>
 
-            <FormComponent onSubmit={handleSubmit(sendForm)}>
+            <FormComponent onSubmit={handleSubmit(onSubmit)}>
                 <InputWrapper>
                 <label htmlFor="localColeta">Local de coleta</label>
                 <input type="text" 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 //falta fazer: lógica de autenticação de login
             //submeter o formulário para "entrar" no sistema e salvar no json ou local storage
@@ -27,7 +27,7 @@ function PaginaLogin(){
                 <button type="submit">Entrar</button>              
 
             </form>
-
+            <h3>Você também pode participar dessa corrente! Não tem uma conta? <Link to="/cadastro-usuario">Cadastre-se</Link> aqui!</h3>
         </div>
     )
 }

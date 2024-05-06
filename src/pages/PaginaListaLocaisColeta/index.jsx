@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import CardColeta from "../../components/CardColeta"
 
 function PaginaListaLocaisColeta(){
-    const dados = useFetch("/coletas.json")
+    const dados = useFetch("/dados.json")
     const [locaisColeta, setLocaisColeta] = useState([])
 
     useEffect(()=>{

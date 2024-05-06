@@ -1,23 +1,26 @@
 import { useForm } from "react-hook-form";
 import { PageTitle, InputWrapper, FormComponent } from "./styles";
-
+import React, {useContext} from "react";
+import { UsuariosContext } from "../../context/UsuariosContext";
 
 //falta usar API viaCep para coletar as informações do endereço da pessoa que está cadastrando.
-        //salvar dados da pessoa cadastrada no localStorage.
+        
 
 function PaginaCadastroUsuario(){
-    const {register, handleSubmit, formState:{errors}} = useForm();
+    const {register, handleSubmit,  formState:{errors}} = useForm();
     const current = new Date().toISOString().split("T")[0] //pega data atual
-    
-    function sendForm(formValue){
-        console.log(formValue)
+    const { cadastrarUsuario} = useContext(UsuariosContext)
+
+    const onSubmit = (data) => {
+        cadastrarUsuario(data);
     }
+
 
     return(
         <div className="container">
             <PageTitle>Cadastrar Usuário</PageTitle>
             
-            <FormComponent onSubmit={handleSubmit(sendForm)}> 
+            <FormComponent onSubmit={handleSubmit(onSubmit)}> 
                 <InputWrapper>
                     <label htmlFor="nome">Nome Completo</label>
                     <input

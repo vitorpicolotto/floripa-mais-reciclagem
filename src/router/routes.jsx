@@ -8,17 +8,18 @@ import PaginaListaLocaisColeta from "../pages/PaginaListaLocaisColeta";
 
 const routes = createBrowserRouter ([
     {
+        path: "/login",
+        element: <PaginaLogin />
+    },
+    
+    {
         path: "/",
         element: <App />,
         children:[
             {
                 path: "/",
                 element: <PaginaInicial />
-            },
-            {
-                path: "/login",
-                element: <PaginaLogin />
-            },
+            },           
             {
                 path: "/cadastro-usuario", 
                 element: <PaginaCadastroUsuario />
