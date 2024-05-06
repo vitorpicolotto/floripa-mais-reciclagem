@@ -11,7 +11,7 @@ function CardColeta({dadosColeta}){
                 <p>Descrição: {dadosColeta.descricao}</p>
 
                 <div className='card-localizacao'>
-                    <h4>Localização: {dadosColeta.localizacao}</h4>
+                    <h4>Localização: {dadosColeta.rua}, {dadosColeta.numero} - {dadosColeta.bairro}</h4>
                     <p>Coordenadas: Latitude - {dadosColeta.coordenadas[0]} S, Longitude - {dadosColeta.coordenadas[1]} W</p>
                 </div>
 
@@ -28,12 +28,16 @@ function CardColeta({dadosColeta}){
 
 CardColeta.propTypes = {
     dadosColeta: PropTypes.exact({
+        id: PropTypes.string.isRequired,
         localColeta: PropTypes.string.isRequired,
         descricao: PropTypes.string.isRequired,
         usuario: PropTypes.string.isRequired,
-        localizacao: PropTypes.string.isRequired,
-        coordenadas:  PropTypes.shape({"latitude":PropTypes.number,"longitude":PropTypes.number}).isRequired,
-        tiposResiduos:  PropTypes.arrayOf(PropTypes.string).isRequired
+        cep: PropTypes.number.isRequired,
+        bairro: PropTypes.string.isRequired,
+        rua: PropTypes.string.isRequired,
+        numero: PropTypes.number.isRequired,
+        coordenadas:  PropTypes.arrayOf(PropTypes.number).isRequired,
+        tiposResiduos:  PropTypes.string.isRequired
     })
 }
 

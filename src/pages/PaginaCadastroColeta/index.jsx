@@ -6,12 +6,29 @@ import { ColetasContext } from "../../context/ColetasContext.jsx";
 
 
 function PaginaCadastroColeta(){
-    const {register, handleSubmit, formState:{errors}} = useForm();
+    const {register, handleSubmit, setValue, getValues, formState:{errors}} = useForm();
     const {cadastrarColeta} = useContext(ColetasContext)
     
     const onSubmit= (data)=> {
         cadastrarColeta(data)
     }
+
+    //viaCep API
+
+    const buscarCep = () =>{
+        let cep = getValues('cep')
+
+        if(!!cep && cep.length==8){
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then((res) => res.json())
+            .then(data => {
+                setValue('rua', data.logradouro)
+                setValue('bairro', data.bairro)
+            })
+            .catch((error) => console.error("Erro na API viaCep", error))
+        }
+    }
+
 
     return(
         <div className="container">
@@ -52,14 +69,48 @@ function PaginaCadastroColeta(){
                 </InputWrapper>
 
                 <InputWrapper>
-                <label htmlFor="localizacao">Endereço</label>
-                <input type="text" 
-                {...register("localizacao",{
-                    required: 'Campo obrigatório',
-                    maxLength: {value: 200, message: "Máximo 200 caracteres"}
+                <label >CEP</label>
+                <input type="number" 
+                name="cep"
+                {...register("cep",{
+                    required: true,
+                    onBlur: () => buscarCep()
                 })}
                 />
-                {errors?.localizacao && <p>{errors.localizacao?.message}</p>}
+                {errors?.cep && <p>{errors.cep?.message}</p>}
+                </InputWrapper>
+
+                <InputWrapper>
+                <label >Endereço</label>
+                <input type="text" 
+                name="rua"
+                {...register("rua",{
+                    required: 'Campo obrigatório'
+                })}
+                />
+                {errors?.rua && <p>{errors.rua?.message}</p>}
+                </InputWrapper>
+
+                <InputWrapper>
+                <label >Número</label>
+                <input type="text" 
+                name="numero"
+                {...register("numero",{
+                    required: 'Campo obrigatório'
+                })}
+                />
+                {errors?.numero && <p>{errors.numero?.message}</p>}
+                </InputWrapper>
+
+                <InputWrapper>
+                <label >Bairro</label>
+                <input type="text" 
+                name="bairro"
+                {...register("bairro",{
+                    required: 'Campo obrigatório'
+                })}
+                />
+                {errors?.bairro && <p>{errors.bairro?.message}</p>}
                 </InputWrapper>
 
                 <InputWrapper>

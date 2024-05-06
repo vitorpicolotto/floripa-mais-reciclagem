@@ -2,17 +2,33 @@ import { useForm } from "react-hook-form";
 import { PageTitle, InputWrapper, FormComponent } from "./styles";
 import React, {useContext} from "react";
 import { UsuariosContext } from "../../context/UsuariosContext";
-
-//falta usar API viaCep para coletar as informações do endereço da pessoa que está cadastrando.
         
 
 function PaginaCadastroUsuario(){
-    const {register, handleSubmit,  formState:{errors}} = useForm();
+    const {register, handleSubmit, setValue, getValues,  formState:{errors}} = useForm();
     const current = new Date().toISOString().split("T")[0] //pega data atual
     const { cadastrarUsuario} = useContext(UsuariosContext)
 
     const onSubmit = (data) => {
         cadastrarUsuario(data);
+    }
+
+    //viaCep API
+
+    const buscarCep = () =>{
+        let cep = getValues('cep')
+
+        if(!!cep && cep.length==8){
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then((res) => res.json())
+            .then(data => {
+                setValue('endereco', data.logradouro)
+                setValue('bairro', data.bairro)
+                setValue('cidade', data.localidade)
+                setValue('estado', data.uf)
+            })
+            .catch((error) => console.error("Erro na API viaCep", error))
+        }
     }
 
 
@@ -100,22 +116,25 @@ function PaginaCadastroUsuario(){
                 </InputWrapper>
 
                 <InputWrapper>
-                    <label htmlFor="cep">CEP</label>
+                    <label>CEP</label>
                     <input
+                    type="number"
+                    name="cep"
                         {...register("cep",{
-                        required: 'Campo obrigatório',
-                        maxLength: {value: 8, message: "Máximo 8 caracteres"}
+                        required: true,
+                        onBlur: () => buscarCep()
                         })}
                     />
                 {errors?.cep && <p>{errors.cep?.message}</p>}
                 </InputWrapper>
 
                 <InputWrapper>
-                    <label htmlFor="endereco">Endereço</label>
+                    <label htmlFor="logradouro">Endereço</label>
                     <input
+                    type="text"
+                    name="endereco"
                         {...register("endereco",{
-                        required: 'Campo obrigatório',
-                        maxLength: {value: 30, message: "Máximo 30 caracteres"}
+                        required: 'Campo obrigatório'
                         })}
                     />
                 {errors?.endereco && <p>{errors.endereco?.message}</p>}
@@ -124,9 +143,10 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="numero">Número da residência</label>
                     <input
+                    type="number"
+                    name="numero"
                         {...register("numero",{
-                        required: 'Campo obrigatório',
-                        maxLength: {value: 5, message: "Máximo 5 caracteres"}
+                        required: 'Campo obrigatório'
                         })}
                     />
                 {errors?.numero && <p>{errors.numero?.message}</p>}
@@ -135,9 +155,10 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="bairro">Bairro</label>
                     <input
+                    type="text"
+                    name="bairro"
                         {...register("bairro",{
-                        required: 'Campo obrigatório',
-                        maxLength: {value: 20, message: "Máximo 20 caracteres"}
+                        required: 'Campo obrigatório'
                         })}
                     />
                 {errors?.bairro && <p>{errors.bairro?.message}</p>}
@@ -146,9 +167,10 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="cidade">Cidade</label>
                     <input
+                    type="text"
+                    name="cidade"
                         {...register("cidade",{
-                        required: 'Campo obrigatório',
-                        maxLength: {value: 20, message: "Máximo 20 caracteres"}
+                        required: 'Campo obrigatório'
                         })}
                     />
                 {errors?.cidade && <p>{errors.cidade?.message}</p>}
@@ -157,9 +179,10 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="estado">Estado (Sigla)</label>
                     <input
+                    type="text"
+                    name="estado"
                         {...register("estado",{
-                        required: 'Campo obrigatório',
-                        maxLength: {value: 2, message: "Máximo 2 caracteres"}
+                        required: 'Campo obrigatório'
                         })}
                     />
                 {errors?.estado && <p>{errors.estado?.message}</p>}
