@@ -86,7 +86,6 @@
       "cpf": 55351353997,
       "data_nasc": "27/02/1979",
       "sexo": "Masculino",
-      "signo": "Peixes",
       "email": "enrico_joaquim_dasneves@michaelpage.com.br",
       "senha": "YccWOhHwR3",
       "cep": 88034050,
@@ -125,6 +124,22 @@
       "endereco": "Rua Nova Esperança",
       "numero": 688,
       "bairro": "Monte Cristo",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "ee1c",
+      "nome": "Thaise Cadorin",
+      "idade": "28",
+      "cpf": "09356417751",
+      "data_nasc": "1995-10-01",
+      "sexo": "Feminino",
+      "email": "thainha@email.com",
+      "senha": "123456",
+      "cep": "88066077",
+      "endereco": "Servidão Zulma Josephina de Jesus",
+      "numero": "62",
+      "bairro": "Morro das Pedras",
       "cidade": "Florianópolis",
       "estado": "SC"
     }
