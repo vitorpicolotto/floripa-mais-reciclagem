@@ -2,8 +2,6 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UsuariosContext } from "../../context/UsuariosContext";
 
-//falta fazer: lógica de autenticação de login
-            //submeter o formulário para "entrar" no sistema e salvar no json ou local storage
 
 function PaginaLogin(){
     const {login} = useContext(UsuariosContext)

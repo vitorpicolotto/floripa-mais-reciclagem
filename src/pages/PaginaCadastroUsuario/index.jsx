@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { PageTitle, InputWrapper, FormComponent } from "./styles";
 import React, {useContext} from "react";
 import { UsuariosContext } from "../../context/UsuariosContext";
+import { Link } from "react-router-dom";
         
 
 function PaginaCadastroUsuario(){
@@ -193,6 +194,8 @@ function PaginaCadastroUsuario(){
                 </div>
 
             </FormComponent>
+
+            <h3>Já tem uma conta? Faça seu <Link to="/login">login</Link> aqui!</h3>
         </div>
     )
 }
