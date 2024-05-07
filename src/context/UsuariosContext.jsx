@@ -15,6 +15,14 @@ export const UsuariosContextProvider = ({children}) => {
     }, [dados])
 
     const cadastrarUsuario = (novoUsuario) => {
+        //Verificação se o CPF já está cadastrado em algum outro usuário
+        const cpfCadastrado = usuarios.some(usuario => usuario.cpf === novoUsuario.cpf)
+
+        if (cpfCadastrado) {
+            alert('CPF já cadastrado! Faça o login!')
+            return;
+        }
+        
         const updatedUsuarios = [...usuarios, novoUsuario];
         setUsuarios(updatedUsuarios);
 
