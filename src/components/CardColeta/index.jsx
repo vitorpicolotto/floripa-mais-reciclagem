@@ -20,7 +20,8 @@ function CardColeta({dadosColeta}){
                     <p>{dadosColeta.tiposResiduos}</p>
                     
                 </div>
-
+                <button>Editar</button>
+                <button>Excluir</button>
             </div>
         </div>
     )

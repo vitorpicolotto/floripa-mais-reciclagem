@@ -44,6 +44,18 @@
         48.5051
       ],
       "tiposResiduos": "Todos"
+    },
+    {
+      "id": "3def",
+      "localColeta": "Comcap Itacorubi",
+      "descricao": "Ponto de coleta de reciclagem",
+      "usuario": "Thaise",
+      "cep": 88034000,
+      "rua": "Rodovia Admar Gonzaga",
+      "numero": "214",
+      "bairro": "Itacorubi",
+      "coordenadas": "48",
+      "tipoResiduos": "Plástico"
     }
   ],
   "usuarios": [
