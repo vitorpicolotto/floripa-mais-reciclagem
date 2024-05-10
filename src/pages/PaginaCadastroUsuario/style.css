@@ -1,0 +1,46 @@
+.container{
+    background-color: var(--cor-principal);
+}
+
+.form-texto{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
+
+.form-link{
+    text-decoration: none;
+    color: var(--cor-fonte-principal);
+}
+
+.form-input{
+    width: 20vw;
+    height: 2.5vh;
+    font-size: 1.1rem;
+}
+
+.form-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.btn{
+    height: 4vh;
+    width: 10vw;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: solid 2px var(--cor-fonte-principal);
+    
+}
+
+.btn:hover{
+    background-color: var(--cor-botao);
+    cursor: pointer;
+}
+
+.form-link:hover{
+    color: var(--cor-secundaria);
+}

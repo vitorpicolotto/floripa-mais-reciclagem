@@ -1,4 +1,5 @@
 import * as PropTypes from  'prop-types';
+import "./style.css"
 
 function CardColeta({dadosColeta}){
     return(
@@ -20,8 +21,8 @@ function CardColeta({dadosColeta}){
                     <p>{dadosColeta.tiposResiduos}</p>
                     
                 </div>
-                <button>Editar</button>
-                <button>Excluir</button>
+                <button className='card-btn'>Editar</button>
+                <button className='card-btn'>Excluir</button>
             </div>
         </div>
     )

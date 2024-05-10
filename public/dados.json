@@ -56,6 +56,18 @@
       "bairro": "Itacorubi",
       "coordenadas": "48",
       "tipoResiduos": "Plástico"
+    },
+    {
+      "id": "b1bf",
+      "localColeta": "Ecoponto CANASVIERAS",
+      "descricao": "AO LADO DO CAMPO DA AMOCAN",
+      "usuario": "GELSON picolotto",
+      "cep": "88054080",
+      "rua": "Rua Desembargador Maurílio Coimbra",
+      "numero": "100",
+      "bairro": "Canasvieiras",
+      "coordenadas": "47",
+      "tipoResiduos": "Entulho"
     }
   ],
   "usuarios": [
@@ -154,6 +166,22 @@
       "bairro": "Morro das Pedras",
       "cidade": "Florianópolis",
       "estado": "SC"
+    },
+    {
+      "id": "59b0",
+      "nome": "Gelson picolotto",
+      "idade": "59",
+      "cpf": "00100200304",
+      "data_nasc": "1964-05-14",
+      "sexo": "Masculino",
+      "email": "gelson@email.com",
+      "senha": "123456",
+      "cep": "81020000",
+      "endereco": "Rua Maria Trevisan Tortato",
+      "numero": "702",
+      "bairro": "Novo Mundo",
+      "cidade": "Curitiba",
+      "estado": "PR"
     }
   ]
 }

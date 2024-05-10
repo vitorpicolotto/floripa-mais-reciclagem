@@ -4,7 +4,7 @@ function Footer(){
 
     return(
        <footer className="rodape">
-        <h3 className="rodape-titulo">Floripa Mais Reciclagem</h3>
+        <h3 className="rodape-titulo">Floripa + Reciclagem</h3>
         <p className="rodape-nome">Desenvolvido por Vitor Picolotto - Futuro Dev</p>
         <div >
             <ul className="rodape-lista">

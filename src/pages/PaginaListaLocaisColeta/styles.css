@@ -1,0 +1,17 @@
+.locais{
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.locais-titulo{
+    font-size: 3rem;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 2rem;    
+}
+
+.locais-card{
+    padding-bottom: 2rem;
+}

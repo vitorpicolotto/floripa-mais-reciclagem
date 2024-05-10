@@ -1,0 +1,19 @@
+.dashboard{
+    background-color: var(--cor-principal);
+    height: 73vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.dashboard-titulo{
+    font-size: 5rem;
+    color: var(--cor-fonte-principal);
+}
+
+.dashboard-apresentacao{
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    color: var(--cor-fonte-escura);
+}

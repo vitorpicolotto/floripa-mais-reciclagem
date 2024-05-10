@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./style.css"
 
 
 const CardContagem = () => {
@@ -26,9 +27,9 @@ const CardContagem = () => {
     }, [])
 
     return(
-        <div>
-            <h3>Nosso aplicativo já conta com {totalUsuarios} usuários cadastrados!</h3>
-            <h3>Além disso, são {totalLocais} locais de coleta disponíveis. Venha conferir o local mais perto de você ou cadastre um novo para ajudar os moradores da sua região!</h3>
+        <div className="card-container">
+            <h3>Nosso aplicativo já conta com {totalUsuarios} usuários cadastrados e {totalLocais} locais de coleta disponíveis!</h3>
+            <h4>Venha conferir o local mais perto de você ou cadastre um novo para ajudar os moradores da sua região!</h4>
         </div>
     )
 

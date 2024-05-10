@@ -1,0 +1,31 @@
+.card{
+    border: solid 2px var(--cor-fonte-principal);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    width: 35vw;
+}
+
+.card-dados{
+    padding: 1rem 0.5rem;
+    font-size: 1.3rem;
+    color: var(--cor-fonte-escura);
+}
+
+.card-titulo{
+    color: var(--cor-fonte-principal)
+}
+
+.card-btn{
+    margin: 0.3rem;
+    height: 4vh;
+    width: 10vw;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: solid 2px var(--cor-fonte-principal);
+    color: var(--cor-fonte-escura);
+}
+
+.card-btn:hover{
+    background-color: var(--cor-botao);
+    cursor: pointer;
+}

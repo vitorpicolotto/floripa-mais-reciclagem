@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { PageTitle, InputWrapper, FormComponent } from "./styles";
+import "./style.css"
 import React, {useContext} from "react";
 import { UsuariosContext } from "../../context/UsuariosContext";
 import { Link } from "react-router-dom";
@@ -35,12 +36,16 @@ function PaginaCadastroUsuario(){
 
     return(
         <div className="container">
-            <PageTitle>Cadastrar Usuário</PageTitle>
+            <PageTitle>Cadastro de usuário</PageTitle>
+            <h3 className="form-texto">Já tem uma conta? Faça seu
+            <Link className="form-link" to="/login"> login!</Link>
+             </h3>
             
             <FormComponent onSubmit={handleSubmit(onSubmit)}> 
                 <InputWrapper>
                     <label htmlFor="nome">Nome Completo</label>
                     <input
+                        className="form-input"
                         {...register("nome",{
                         required: 'Campo obrigatório',
                         maxLength: {value: 50, message: "Máximo 50 caracteres"}
@@ -52,6 +57,7 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="idade">Idade</label>
                     <input
+                    className="form-input"
                         {...register("idade",{
                         required: 'Campo obrigatório',
                         maxLength: {value: 2, message: "Máximo 02 caracteres"}
@@ -63,6 +69,7 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="cpf">CPF (apenas números)</label>
                     <input
+                    className="form-input"
                         {...register("cpf",{
                         required: 'Campo obrigatório',
                         maxLength: {value: 11, message: "Máximo 11 caracteres"}
@@ -74,7 +81,7 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="data_nasc">Data de Nascimento</label>
                     <input
-                    type='date' max={current}
+                    type='date' max={current} className="form-input"
                         {...register("data_nasc",{
                         required: 'Campo obrigatório'
                         })}
@@ -84,6 +91,7 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label htmlFor="sexo">Sexo</label>
                     <select
+                    className="form-input"
                         {...register("sexo",{
                         required: 'Campo obrigatório'
                         })}>
@@ -96,7 +104,7 @@ function PaginaCadastroUsuario(){
 
                 <InputWrapper>
                     <label htmlFor="email">E-mail</label>
-                    <input type="email" id="email"
+                    <input type="email" id="email" className="form-input"
                         {...register("email",{
                         required: 'Campo obrigatório',
                         maxLength: {value: 50, message: "Máximo 50 caracteres"}
@@ -107,7 +115,7 @@ function PaginaCadastroUsuario(){
 
                 <InputWrapper>
                     <label htmlFor="senha">Senha</label>
-                    <input type="password"
+                    <input type="password" className="form-input"
                         {...register("senha",{
                         required: 'Campo obrigatório',
                         maxLength: {value: 20, message: "Máximo 20 caracteres"}
@@ -119,7 +127,7 @@ function PaginaCadastroUsuario(){
                 <InputWrapper>
                     <label>CEP</label>
                     <input
-                    type="number"
+                    type="number" className="form-input"
                     name="cep"
                         {...register("cep",{
                         required: true,
@@ -133,7 +141,7 @@ function PaginaCadastroUsuario(){
                     <label htmlFor="logradouro">Endereço</label>
                     <input
                     type="text"
-                    name="endereco"
+                    name="endereco" className="form-input"
                         {...register("endereco",{
                         required: 'Campo obrigatório'
                         })}
@@ -145,7 +153,7 @@ function PaginaCadastroUsuario(){
                     <label htmlFor="numero">Número da residência</label>
                     <input
                     type="number"
-                    name="numero"
+                    name="numero" className="form-input"
                         {...register("numero",{
                         required: 'Campo obrigatório'
                         })}
@@ -157,7 +165,7 @@ function PaginaCadastroUsuario(){
                     <label htmlFor="bairro">Bairro</label>
                     <input
                     type="text"
-                    name="bairro"
+                    name="bairro" className="form-input"
                         {...register("bairro",{
                         required: 'Campo obrigatório'
                         })}
@@ -169,7 +177,7 @@ function PaginaCadastroUsuario(){
                     <label htmlFor="cidade">Cidade</label>
                     <input
                     type="text"
-                    name="cidade"
+                    name="cidade" className="form-input"
                         {...register("cidade",{
                         required: 'Campo obrigatório'
                         })}
@@ -178,10 +186,10 @@ function PaginaCadastroUsuario(){
                 </InputWrapper>
 
                 <InputWrapper>
-                    <label htmlFor="estado">Estado (Sigla)</label>
+                    <label htmlFor="estado">Estado</label>
                     <input
                     type="text"
-                    name="estado"
+                    name="estado" className="form-input"
                         {...register("estado",{
                         required: 'Campo obrigatório'
                         })}
@@ -189,13 +197,13 @@ function PaginaCadastroUsuario(){
                 {errors?.estado && <p>{errors.estado?.message}</p>}
                 </InputWrapper>
 
-                <div>
-                    <button type="submit">Cadastrar Usuário</button>
+                <div className="form-btn">
+                    <button className="btn" type="submit">Cadastrar Usuário</button>
                 </div>
 
             </FormComponent>
 
-            <h3>Já tem uma conta? Faça seu <Link to="/login">login</Link> aqui!</h3>
+            
         </div>
     )
 }

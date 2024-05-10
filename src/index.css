@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jaro:opsz@6..72&display=swap');
+
+:root{
+    --fonte-titulos: 'Bebas Neue', sans-serif;
+    --cor-principal: #6b9080;
+    --cor-secundaria: #a4c3b2;
+    --cor-botao: #cce3de;
+    --cor-fonte-principal: #f6fff8;
+    --cor-fonte-escura: #252323;
+}
+
+*{
+    font-family: var(--fonte-titulos);
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}

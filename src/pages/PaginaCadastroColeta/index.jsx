@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { PageTitle, FormComponent, InputWrapper } from "./styles.js";
+import "./styles.css"
 import React, {useContext} from "react";
 import { ColetasContext } from "../../context/ColetasContext.jsx";
 
@@ -36,8 +37,8 @@ function PaginaCadastroColeta(){
 
             <FormComponent onSubmit={handleSubmit(onSubmit)}>
                 <InputWrapper>
-                <label htmlFor="localColeta">Local de coleta</label>
-                <input type="text" 
+                <label htmlFor="localColeta">Nome do ponto</label>
+                <input type="text" className="form-input"
                 {...register("localColeta",{
                     required: 'Campo obrigatório',
                     maxLength: {value: 100, message: "Máximo 100 caracteres"}
@@ -48,7 +49,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label htmlFor="descricao">Descrição do local</label>
-                <input type="text" 
+                <input type="text" className="form-input"
                 {...register("descricao",{
                     required: 'Campo obrigatório',
                     maxLength: {value: 300, message: "Máximo 300 caracteres"}
@@ -59,7 +60,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label htmlFor="usuario">Usuario</label>
-                <input type="text" 
+                <input type="text" className="form-input"
                 {...register("usuario",{
                     required: 'Campo obrigatório',
                     maxLength: {value: 50, message: "Máximo 50 caracteres"}
@@ -70,7 +71,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label >CEP</label>
-                <input type="number" 
+                <input type="number" className="form-input"
                 name="cep"
                 {...register("cep",{
                     required: true,
@@ -82,7 +83,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label >Endereço</label>
-                <input type="text" 
+                <input type="text" className="form-input"
                 name="rua"
                 {...register("rua",{
                     required: 'Campo obrigatório'
@@ -93,7 +94,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label >Número</label>
-                <input type="text" 
+                <input type="text" className="form-input"
                 name="numero"
                 {...register("numero",{
                     required: 'Campo obrigatório'
@@ -104,7 +105,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label >Bairro</label>
-                <input type="text" 
+                <input type="text" className="form-input"
                 name="bairro"
                 {...register("bairro",{
                     required: 'Campo obrigatório'
@@ -115,13 +116,13 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label htmlFor="coordenadas">Coordenadas</label>
-                <input type="number" placeholder= "Latitude"
+                <input type="number" placeholder= "Latitude" className="form-input"
                 {...register("coordenadas",{
                     required: 'Campo obrigatório',
                     maxLength: {value: 10, message: "Máximo 10 caracteres"}
                 })}
                 />
-                 <input type="number" placeholder= "Longitude"
+                 <input type="number" placeholder= "Longitude" className="form-input"
                 {...register("coordenadas",{
                     required: 'Campo obrigatório',
                     maxLength: {value: 10, message: "Máximo 10 caracteres"}
@@ -132,7 +133,7 @@ function PaginaCadastroColeta(){
 
                 <InputWrapper>
                 <label htmlFor="tiposResiduos">Tipos de resíduos</label>
-                <select
+                <select className="form-input"
                 {...register("tipoResiduos", {
                     required:"Campo obrigatório",
                 })}>
@@ -149,7 +150,7 @@ function PaginaCadastroColeta(){
                 </InputWrapper>
 
                 <div>
-                    <button type="submit">Cadastrar</button>
+                    <button className="btn" type="submit">Cadastrar</button>
                 </div>
             </FormComponent>
 

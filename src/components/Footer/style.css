@@ -1,9 +1,11 @@
 .rodape{
-    margin-top: 1em;
+    height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fonte-escura);
 }
 
 .rodape-lista{
@@ -11,10 +13,13 @@
     flex-direction: row;
     list-style: none;
     gap: 2em;
+    
 
 }
 
 .rodape-link{
     text-decoration: none;
     margin-right: 10px;
+    text-decoration: none;
+    color: var(--cor-fonte-escura);
 }

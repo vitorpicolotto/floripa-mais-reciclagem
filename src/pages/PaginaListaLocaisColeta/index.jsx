@@ -1,6 +1,7 @@
 import useFetch from "../../hooks/useFetch"
 import { useState, useEffect } from "react"
 import CardColeta from "../../components/CardColeta"
+import "./styles.css"
 
 function PaginaListaLocaisColeta(){
     const dados = useFetch("/dados.json")
@@ -20,12 +21,14 @@ function PaginaListaLocaisColeta(){
       }, [dados])
 
     return(
-        <>
-        <h1>Locais de Coleta</h1>
-        {!!locaisColeta && locaisColeta.map((dados, index) => (
-      <CardColeta dadosColeta={dados} key={index}  />
-        ))}
-        </>
+        <div className="locais">
+          <h1 className="locais-titulo">Locais de Coleta</h1>
+            <div className="locais-card">
+              {!!locaisColeta && locaisColeta.map((dados, index) => (
+              <CardColeta dadosColeta={dados} key={index}  />
+             ))}
+            </div>
+        </div>
     )
 }
 
