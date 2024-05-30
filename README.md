@@ -9,10 +9,14 @@ O F+R é um sistema que permite o usuário encontrar pontos de coleta seletiva n
 > Cadastro de usuário
 
 > Login
+![image](https://github.com/vitorpicolotto/floripa-mais-reciclagem/assets/89413860/46c8ece0-d407-424a-9156-a73522a78328)
 
 > Listagem de locais de coleta
+![image](https://github.com/vitorpicolotto/floripa-mais-reciclagem/assets/89413860/176b15bc-ceb1-4998-9081-e3eee25671b3)
 
 > Cadastro de novos locais
+![image](https://github.com/vitorpicolotto/floripa-mais-reciclagem/assets/89413860/33135e57-4f48-4244-b3a5-06f2d625d3fd)
+
 
 ## Tecnologias utilizadas
 > HTML
@@ -24,6 +28,8 @@ O F+R é um sistema que permite o usuário encontrar pontos de coleta seletiva n
 > React.js
 
 > Vite
+
+> API viaCEP
 
 > Git Flow/GitHub
 
